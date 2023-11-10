@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/dashboard_bg"
+    tools:context=".Application_Progress_Fragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#39A77A"
+        android:fontFamily="@font/allerta"
+        android:padding="@dimen/_10sdp"
+        android:text="Application Process"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/dashboard_bg"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <!-- Add this to your existing layout -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_22sdp">
+
+                <!-- Content of cardView1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:background="@drawable/content_border"
+                    android:orientation="vertical">
+
+                    <com.shuhart.stepview.StepView
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:id="@+id/step_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        app:sv_selectedCircleColor="#8BC34A"
+                        app:sv_selectedTextColor="@color/colorPrimary"
+                        app:sv_stepLineWidth="1dp"
+                        app:sv_stepPadding="4dp"
+                        app:sv_nextTextColor="#E91E63"
+                        app:sv_nextStepLineColor="@color/colorPrimary"
+                        app:sv_doneCircleColor="#C923B13B"
+                        app:sv_doneStepLineColor="@color/colorPrimary"
+                        app:sv_doneCircleRadius="12dp"
+                        app:sv_selectedCircleRadius="12dp"
+                        app:sv_selectedStepNumberColor="@color/white"
+                        app:sv_stepViewStyle="@style/StepView"
+                        app:sv_doneStepMarkColor="@color/colorPrimary"
+                        app:sv_doneTextColor="@color/colorPrimary"
+                        app:sv_stepNumberTextSize="12sp"
+                        app:sv_steps="@array/steps"
+                        app:sv_animationType="Line" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Please take note that your previous application will be automatically rejected if you apply again without having your previous application approved."
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/re_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#39A77A"
+                        android:fontFamily="@font/allerta"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/nav_border_design"
+                        android:gravity="center"
+                        android:text="Re-Apply"
+                        android:textSize="14sp" />
+                    <Button
+                        android:id="@+id/summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#39A77A"
+                        android:fontFamily="@font/allerta"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/nav_border_design"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Summary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:layout_marginStart="@dimen/_5sdp"-->
+<!--                android:layout_marginBottom="@dimen/_10sdp"-->
+<!--                android:layout_marginEnd="@dimen/_5sdp"-->
+<!--                android:elevation="@dimen/_15sdp"-->
+<!--                app:cardCornerRadius="@dimen/_22sdp">-->
+
+<!--                &lt;!&ndash; Content of cardView1 &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:padding="@dimen/_10sdp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:background="@drawable/content_border"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text="Application Summary"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/nameTextView"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/fatherName"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/dateOfBirth"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/loanamount2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/loanduration2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/email2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/phone2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/address2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:fontFamily="@font/allerta"-->
+<!--                        android:text=""-->
+<!--                        android:textColor="@color/colorPrimary"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_22sdp">
+
+                <!-- Content of cardView1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:background="@drawable/content_border"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="Total Loan Applications Received"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <com.github.hamzaahmedkhan.counteranimationtextview.CountAnimationTextView
+                        android:id="@+id/moneyPositive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="Total Loan Applications Approved"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <com.github.hamzaahmedkhan.counteranimationtextview.CountAnimationTextView
+                        android:id="@+id/loanapproved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="Total Loan Applications Rejected"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <com.github.hamzaahmedkhan.counteranimationtextview.CountAnimationTextView
+                        android:id="@+id/rejected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="28sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="Total Loan Applications Pending"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <com.github.hamzaahmedkhan.counteranimationtextview.CountAnimationTextView
+                        android:id="@+id/pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="28sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+        </LinearLayout>

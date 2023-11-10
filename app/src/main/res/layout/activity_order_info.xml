@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrderInfoActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#39A77A"
+        android:padding="@dimen/_10sdp"
+        android:fontFamily="@font/allerta"
+        android:text="Order Information"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/current"
+            android:text="Current Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.tabs.TabItem
+            android:text="Order History"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.tabs.TabLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adVieworderinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111">
+
+    </com.google.android.gms.ads.AdView>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager2.widget.ViewPager2>
+</LinearLayout>

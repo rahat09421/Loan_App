@@ -6,17 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/mainscreen"
-    android:background="@drawable/bg"
+    android:background="@drawable/dashboard_bg"
     android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/allerta"
         android:text="@string/hello"
-        android:textColor="#0D47A1"
+        android:textColor="@color/white"
         android:textSize="36sp" />
     <TextView
         android:fontFamily="@font/allerta"
@@ -24,7 +31,7 @@
         android:layout_height="wrap_content"
         android:textSize="36sp"
         android:layout_gravity="center"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:layout_marginTop="10dp"
         android:text="@string/welcome_back"
         />
@@ -35,7 +42,7 @@
         android:textSize="16sp"
         android:textColor="#000000"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/_60sdp"
         android:text="@string/e_mail" />
 
     <EditText
@@ -44,7 +51,7 @@
         android:layout_width="@dimen/_280sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:hint="@string/enter_email_address"
         android:inputType="textEmailAddress"
         android:textColor="#000000"
@@ -78,7 +85,7 @@
         android:fontFamily="@font/allerta"
         android:layout_width="@dimen/_280sdp"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:layout_gravity="center"
         android:textColor="#000000"
         android:layout_marginTop="15dp"
@@ -91,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#5e62de"
+        android:backgroundTint="#39A77A"
         android:fontFamily="@font/allerta"
         android:text="@string/log_in"
         android:textSize="18sp" />
@@ -105,31 +112,28 @@
         android:layout_marginTop="25dp"
         android:text="@string/or_login_with" />
 
-    <LinearLayout
-        android:layout_width="@dimen/_280sdp"
-        android:layout_height="@dimen/_32sdp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+<!--    <LinearLayout-->
+<!--        android:layout_width="@dimen/_280sdp"-->
+<!--        android:layout_height="@dimen/_32sdp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:orientation="horizontal">-->
 
+
+<!--        <com.google.android.gms.common.SignInButton-->
+<!--            android:id="@+id/google"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:fontFamily="@font/allerta"/>-->
         <ImageView
             android:id="@+id/google"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_110sdp"
-            android:background="@drawable/google"
+            android:src="@drawable/google"
             android:contentDescription="@string/google" />
-
-        <ImageView
-            android:id="@+id/fb"
-            android:layout_width="30dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:background="@drawable/facebook"
-            android:contentDescription="@string/fb" />
-    </LinearLayout>
 
     <LinearLayout
             android:layout_width="@dimen/_280sdp"
@@ -142,7 +146,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:layout_marginStart="@dimen/_80sdp"
+                android:layout_marginStart="@dimen/_78sdp"
                 android:gravity="center"
                 android:textColor="#000000"
                 android:text="@string/new_to_fete"/>
@@ -150,7 +154,7 @@
             <TextView
                 android:id="@+id/signup"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_45sdp"
                 android:fontFamily="@font/allerta"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:textStyle="bold"
@@ -158,5 +162,7 @@
                 android:textColor="#000000"
                 android:textSize="16sp" />
         </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/dashboard_bg"
+android:orientation="vertical">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/content_border"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_face_retouching_natural_24"
+                android:scaleType="centerCrop"
+                android:background="@drawable/profile_border"/>
+
+            <!-- User Info (Name, Email, etc.) -->
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:text="Your Email"
+                android:fontFamily="@font/allerta"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/voucher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/voucher"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vouchers"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/orderinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/order"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Information"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/loanDirections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/directions"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loan Directions"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/resetpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/management"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset Password"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/followUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/follow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow Us"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customer_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/customer_support"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Service"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/about_us"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+        <!-- Repeat the above pattern for other menu items -->
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/content_border"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Logout"
+                android:fontFamily="@font/allerta"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

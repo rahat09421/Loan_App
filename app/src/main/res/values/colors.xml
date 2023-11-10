@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <drawable name="border_color">
+        <gradient
+            android:startColor="#39a77a"
+            android:endColor="#FFFFFFFF"
+            android:angle="45"
+            android:type="linear"/>
+    </drawable>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+        <color name="colorPrimary">#39A77A</color>
+        <!-- other color resources -->
+    <color name="stepview_line_done">@android:color/white</color>
+    <color name="stepview_line_next">#26ffffff</color>
+    <color name="stepview_text_next">#40ffffff</color>
+    <color name="stepview_text_done">#40ffffff</color>
+    <color name="stepview_text_selected">@android:color/white</color>
+    <color name="stepview_circle_done">@android:color/white</color>
+    <color name="stepview_circle_selected">@android:color/white</color>
+    <color name="stepview_selected_number">#25448a</color>
+    <color name="stepview_mark">@color/stepview_selected_number</color>
+
 </resources>

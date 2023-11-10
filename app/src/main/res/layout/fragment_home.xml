@@ -1,23 +1,496 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
+    android:background="@drawable/dashboard_bg"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
     <TextView
-        android:id="@+id/text_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/hello"
+        android:background="#39A77A"
+        android:padding="@dimen/_10sdp"
+        android:fontFamily="@font/allerta"
+        android:text="Harwaqt"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:elevation="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_22sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/content_border"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/allerta"
+                android:text="Maximum Amount"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/allerta"
+                    android:layout_marginStart="@dimen/_90sdp"
+                    android:text="Rs."
+                    android:textAlignment="center"
+                    android:textColor="#252525"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:fontFamily="@font/allerta"
+                    android:text="25000"
+                    android:textAlignment="center"
+                    android:textColor="#252525"
+                    android:textSize="38sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/allerta"
+                android:text="Maximum Duration Upto 30 days"
+                android:textAlignment="center"
+                android:textColor="#252525"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/applynow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:backgroundTint="#39A77A"
+                android:fontFamily="@font/allerta"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/apply_now"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="402dp"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:fontFamily="@font/allerta"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:text="Product Introduction"
+                    android:textColor="#252525"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView1"
+                    app:layout_constraintEnd_toStartOf="@+id/cardView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:elevation="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_22sdp"
+                    app:layout_constraintBottom_toTopOf="@id/cardView3"
+                    app:layout_constraintEnd_toStartOf="@id/cardView2"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <!-- Content of cardView1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/content_border"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/high_credit"
+                            android:contentDescription="@string/cycle"
+                            android:padding="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="High Credit Limit"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="Up to Rs. 100,000"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:elevation="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_22sdp"
+                    app:layout_constraintBottom_toTopOf="@id/cardView4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/cardView1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <!-- Content of cardView2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/content_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/no_colleteral"
+                            android:contentDescription="@string/cycle"
+                            android:padding="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="No Collateral"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="100% Online Processing"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:elevation="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_22sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/cardView4"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardView1"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <!-- Content of cardView3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/content_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/fast_trans"
+                            android:contentDescription="@string/cycle"
+                            android:padding="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="Fast Approval"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="Whithin a Few Minutes "
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_110sdp"
+                    android:elevation="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_22sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toEndOf="@id/cardView3"
+                    app:layout_constraintTop_toBottomOf="@id/cardView2"
+                    app:layout_constraintWidth_percent="0.5">
+
+                    <!-- Content of cardView4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/content_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/instant"
+                            android:contentDescription="@string/cycle"
+                            android:padding="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="Instant Disburstment"
+                            android:textAlignment="center"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/allerta"
+                            android:text="To Any Account"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:fontFamily="@font/allerta"
+                android:text="Platform History"
+                android:textColor="#252525"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_22sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/content_border"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Platform Service"
+                        android:layout_gravity="start"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:textColor="#252525"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Established in 2023, we inlist on licensed operation and cooperate with domestic licensed and legal banks to provide financial services to million of users."
+                        android:textColor="#252525"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Stable Operation"
+                        android:layout_gravity="start"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:textColor="#252525"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_15sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="With a professional financial team for real-time risk monitoring, we safegaurd our users' borrowing and our product is in line with the national regulation."
+                        android:textColor="#252525"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:fontFamily="@font/allerta"
+                android:text="@string/secure_legal"
+                android:textColor="#252525"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:elevation="@dimen/_15sdp"
+                app:cardCornerRadius="@dimen/_22sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/content_border"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Data Privacy Protection"
+                        android:layout_gravity="start"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:textColor="#252525"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Strictly Protected User Privacy, Use With Peace Of Mind"
+                        android:textColor="#252525"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Regulated By SECP, Safe and Reliable"
+                        android:layout_gravity="start"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:textColor="#252525"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_15sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="License: No. SC/NBFC-2/209/SFSL/2023-05"
+                        android:textColor="#252525"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_15sdp"
+                        android:fontFamily="@font/allerta"
+                        android:text="Comulatively Serving 10 Million Customers, Trustworthy"
+                        android:textColor="#252525"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

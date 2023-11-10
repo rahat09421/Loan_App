@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Harwaqt Loan App</string>
+    <string name="app_name">Harwaqt</string>
     <string name="hello">Hello,</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="e_mail">E-Mail</string>
@@ -9,12 +9,12 @@
     <string name="forget_password">Forget Password?</string>
     <string name="log_in">LOG IN</string>
     <string name="or_login_with">OR LOGIN WITH</string>
-    <string name="new_to_fete_sign_up">New To FETE? Sign Up</string>
+    <string name="new_to_fete_sign_up">New To Harwaqt? Sign Up</string>
     <string name="google">Google</string>
     <string name="apple">Apple</string>
     <string name="fb">Facebook\n</string>
     <string name="eye">Eye</string>
-    <string name="new_to_fete">New To FETE?</string>
+    <string name="new_to_fete">New To Harwaqt?</string>
     <string name="sign_up">Sign Up</string>
     <string name="signup_enjoy_the_best_services"><![CDATA[Signup & Enjoy The Best Services]]></string>
     <string name="enter_mobile_no">Enter Mobile No.</string>
@@ -37,10 +37,94 @@
     <string name="account_details">Account Details</string>
     <string name="apply_now">Apply Now</string>
     <string name="application_process">Application Process</string>
-    <string name="harwaqt_loan">HARWAQT LOAN</string>
+    <string name="harwaqt_loan">HARWAQT</string>
     <string name="person">person</string>
     <string name="click_here_to_apply_for_loan">Click Here To Apply For Loan</string>
     <string name="cycle">cycle</string>
     <string name="calculator">calculator</string>
     <string name="exit">exit</string>
+    <string name="hello_blank_fragment">This is the Home</string>
+    <string name="secure_legal"><![CDATA[Secure & Legal]]></string>
+    <string name="about_us01"><![CDATA[Harwaqt is a product powered by Saodcroed Financial Services Ltd which is duly registered & licensed by SECPC. It is an online loan application. You can get safe and flexible loans through Harwaqt. You can choose a variety of methods to receive the loan amount. You can also pay your loan through multiple channels and there are no hidden charges. Your information is secure with us and used for verification only. We will determine the loan amount through the risk assessment of your information and credit evaluation.]]></string>
+    <string name="about_us02">1. Harwaqt values the safety of its customers. If Harwaqt users are subject to abusive language, threats to privacy and safety, etc. by any of its staff members, you are encouraged to please keep evidence and file a complaint to us. Such actions shall not be tolerated by Barwaqt.</string>
+    <string name="about_us03">2. The loan granted by Harwaqt is subject to your confirmation. You may click on the \'Cancel\' button during your loan application process. Harwaqt will never disburse the loan without your consent.</string>
+    <string name="about_us04">3. Harwaqt will never disburse the loan without your consent. If you have applied for the loan by mistake, please repay the principal amount and service fee within 24 hours and contact us at your earliest convenience. The service fee will be included applicable Verisy (Rs.), CIB (RS.) costs and Fund Transfer Cost, total 100 PKR. Subject to our internal policies, we shall cancel your loan application. For any queries, please do not hesitate to contact us, we will serve you wholeheartedly.</string>
+    <string name="about_us05">Service Hotline: 02238495050 | 02233454000</string>
+    <string name="about_us07">4. Harwaqt reserves the right of final interpretation for all the rules above.</string>
+    <string name="about_us06">Complaint Email: cs@saoodcredtfintec.com</string>
+    <string name="skip">Skip</string>
+    <string name="logo">logo</string>
+
+    <string-array name="education_levels">
+        <item>--Select Education Level--</item>
+        <item>Did not Received Education</item>
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>Intermediate/Diploma</item>
+        <item>Bachelors or above</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="marital_status">
+        <item>--Select Marital Status--</item>
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="occupation">
+        <item>--Select Occupation--</item>
+        <item>Employee</item>
+        <item>Self Employed</item>
+        <item>Student</item>
+        <item>Un-Employed</item>
+        <item>Others</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="monthly_income">
+        <item>--Select Monthly Income--</item>
+        <item>Less than Rs.10000</item>
+        <item>Rs.10000–Rs.25000</item>
+        <item>Rs.25001–Rs.40000</item>
+        <item>Rs.40001–Rs.55000</item>
+        <item>Grater than Rs.55000</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="resident_city">
+        <item>--Select Area--</item>
+        <item>Azad Kashmir</item>
+        <item>Balochistan</item>
+        <item>Gilgit</item>
+        <item>Islamabad</item>
+        <item>KPK</item>
+        <item>Punjab</item>
+        <item>Sindh</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="mobile_wallet">
+        <item>--Select Account--</item>
+        <item>Easypaisa</item>
+        <item>JazzCash</item>
+        <item>NayaPay</item>
+        <item>SadaPay</item>
+        <item>MCB</item>
+        <item>NBP</item>
+        <item>UBL</item>
+        <item>HBL</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="loan_type">
+        <item>--Select Loan Type--</item>
+        <item>Home Loan</item>
+        <item>Personal Loan</item>
+        <item>Education Loan</item>
+        <item>Agricultural Loan</item>
+        <item>Short-Term Business Loan</item>
+        <!-- Add more options as needed -->
+    </string-array>
+    <string-array name="steps">
+        <item>Start</item>
+        <item>Applied</item>
+        <item>In Review</item>
+        <item>Verified</item>
+    </string-array>
 </resources>

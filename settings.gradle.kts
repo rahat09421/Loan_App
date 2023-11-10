@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Interface"
+rootProject.name = "Harwaqt"
 include(":app")
  
