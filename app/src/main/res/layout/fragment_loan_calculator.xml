@@ -144,6 +144,8 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/allerta"
                         android:padding="@dimen/_20sdp"
+                        android:textAlignment="center"
+                        android:text="Input Values and then click to calculate to see Results."
                         android:textColor="#252525"
                         android:textSize="16sp"
                         android:textStyle="bold" />

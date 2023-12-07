@@ -111,21 +111,6 @@
         android:textColor="#000000"
         android:layout_marginTop="25dp"
         android:text="@string/or_login_with" />
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="@dimen/_280sdp"-->
-<!--        android:layout_height="@dimen/_32sdp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:orientation="horizontal">-->
-
-
-<!--        <com.google.android.gms.common.SignInButton-->
-<!--            android:id="@+id/google"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:fontFamily="@font/allerta"/>-->
         <ImageView
             android:id="@+id/google"
             android:layout_width="@dimen/_27sdp"

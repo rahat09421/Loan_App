@@ -50,7 +50,7 @@
             android:layout_marginBottom="@dimen/_10sdp"
             android:layout_gravity="center"
             app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-3940256099942544/6300978111">
+            app:adUnitId="ca-app-pub-9204826362738432/1373943806">
 
         </com.google.android.gms.ads.AdView>
         <TextView

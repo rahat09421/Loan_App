@@ -17,11 +17,16 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -35,6 +40,7 @@ public class ApplyNowActivity extends AppCompatActivity {
     Spinner city, spinnerEducation, spinnerMartial, spinnerIncome, spinnerOccupation, spinnerMethod, spinnerLoanType;
 
     private DatabaseReference databaseReference;
+    InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,9 +116,46 @@ public class ApplyNowActivity extends AppCompatActivity {
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putInt("currentStep", currentStep + 1);
                                 editor.apply();
-                                Intent i = new Intent(ApplyNowActivity.this, LoanEstimationActivity.class);
-                                startActivity(i);
-                                finish();
+                                {
+                                    if (mInterstitialAd != null) {
+                                        mInterstitialAd.show(ApplyNowActivity.this);
+
+                                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                                            @Override
+                                            public void onAdClicked() {
+                                                // Called when a click is recorded for an ad.
+                                            }
+                                            @Override
+                                            public void onAdDismissedFullScreenContent() {
+                                                // Called when ad is dismissed.
+                                                // Set the ad reference to null so you don't show the ad a second time.
+                                                Intent i = new Intent(ApplyNowActivity.this, LoanEstimationActivity.class);
+                                                startActivity(i);
+                                                loadint();
+                                            }
+
+                                            @Override
+                                            public void onAdFailedToShowFullScreenContent(AdError adError) {
+                                                // Called when ad fails to show.
+                                                mInterstitialAd = null;
+                                            }
+
+                                            @Override
+                                            public void onAdImpression() {
+                                                // Called when an impression is recorded for an ad.
+                                            }
+
+                                            @Override
+                                            public void onAdShowedFullScreenContent() {
+                                                // Called when ad is shown.
+                                            }
+                                        });
+                                    } else {
+                                        Intent i = new Intent(ApplyNowActivity.this, LoanEstimationActivity.class);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                }
                             }
                         });
                         pDialog.setCancelText("No");
@@ -244,7 +287,6 @@ public class ApplyNowActivity extends AppCompatActivity {
 
         // Push data to Firebase
         userReference.setValue(data);
-//            databaseReference.push().setValue(data);
 
         // You can also use addOnCompleteListener to handle success or failure
     }
@@ -257,6 +299,30 @@ public class ApplyNowActivity extends AppCompatActivity {
         }
         return false;
     }
+    public  void loadint(){
+        MobileAds.initialize(ApplyNowActivity.this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {}
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(ApplyNowActivity.this,"ca-app-pub-9204826362738432/3519511403", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        // The mInterstitialAd reference will be null until
+                        // an ad is loaded.
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        // Handle the error
+                        mInterstitialAd = null;
+                    }
+                });
+    }
+
 
 }
 

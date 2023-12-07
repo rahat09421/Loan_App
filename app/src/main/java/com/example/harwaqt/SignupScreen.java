@@ -52,7 +52,7 @@ public class SignupScreen extends AppCompatActivity {
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        Intent i = new Intent(SignupScreen.this, MainActivity.class);
+                                        Intent i = new Intent(SignupScreen.this, HomeActivity.class);
                                         startActivity(i);
                                         finish();
 

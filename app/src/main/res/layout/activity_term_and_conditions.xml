@@ -9,5 +9,15 @@
         android:id="@+id/termAndConditionWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewterms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-9204826362738432/1373943806">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
